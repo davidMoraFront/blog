@@ -8,6 +8,7 @@ import { Article } from '../models/article';
 })
 export class ArticlePreviewComponent implements OnInit {
   @Input() article: Article;
+  linkText: string = 'Continue reading';
 
   constructor() {}
 

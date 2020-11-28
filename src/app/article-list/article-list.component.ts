@@ -1,7 +1,7 @@
 import { ArticleService } from './../services/article-service/article.service';
 import { Article } from './../models/article';
 import { Component, OnInit } from '@angular/core';
-import { SharedService } from '../shared.service';
+import { SharedService } from './../services/shared/shared.service';
 import { Title } from '@angular/platform-browser';
 
 @Component({

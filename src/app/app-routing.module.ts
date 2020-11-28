@@ -1,7 +1,6 @@
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ArticleComponent } from './article/article.component';
 import { ArticleListComponent } from './article-list/article-list.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { AboutComponent } from './about/about.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { NgModule } from '@angular/core';
@@ -29,10 +28,6 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent,
-  },
-  {
-    path: 'dashboard',
-    component: DashboardComponent,
   },
   {
     path: ':key',

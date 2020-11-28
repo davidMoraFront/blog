@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class NavBarComponent implements OnInit {
   articlesLink: string = 'Articles';
   aboutLink: string = 'About';
-  dashboardLink: string = 'Dashboard';
 
   constructor() {}
 
