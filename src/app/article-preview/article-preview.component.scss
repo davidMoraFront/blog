@@ -1,3 +1,5 @@
+@import "../../styles.scss";
+
 .card {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 4px;
@@ -18,7 +20,7 @@
 
     .continue-reading {
       font-style: italic;
-      color: gray;
+      color: $link-color;
     }
   }
 }

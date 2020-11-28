@@ -1,9 +1,11 @@
+@import "../../styles.scss";
+
 div {
   font-size: 1.2em;
   text-align: center;
-  color: #6c757d;
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
+  color: $nav-color;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
   padding: 0.5rem;
   margin-top: 15px;
 }
