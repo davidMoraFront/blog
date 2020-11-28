@@ -1,4 +1,3 @@
-import { ARTICLES } from './../../mocks/mock-articles';
 import { Article } from './../../models/article';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
@@ -8,16 +7,13 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class ArticleService {
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   getArticles(): Observable<Article[]> {
-    // return this.http.get<Article[]>();
-    const articles: Article[] = ARTICLES;
-    return of(articles);
+    return this.http.get<Article[]>('http://localhost:8000/articles');
   }
 
   getArticle(key: string): Observable<Article> {
-    const articles: Article[] = ARTICLES.filter((art) => art.key === key);
-    return of(articles[0]);
+    return this.http.get<Article>('http://localhost:8000/articles/' + key);
   }
 }

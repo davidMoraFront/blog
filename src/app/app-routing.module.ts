@@ -34,7 +34,6 @@ const routes: Routes = [
     path: 'dashboard',
     component: DashboardComponent,
   },
-
   {
     path: ':key',
     component: ArticleComponent,
@@ -42,9 +41,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    initialNavigation: 'enabled'
-})],
+  imports: [
+    RouterModule.forRoot(routes, {
+      initialNavigation: 'enabled',
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
