@@ -37,7 +37,7 @@ describe('ArticleListComponent', () => {
   });
 
   describe('ngOnInit', () => {
-    it('makes expected calls', () => {
+    it('makes expected calls onInit', () => {
       const titleStub: Title = fixture.debugElement.injector.get(Title);
       spyOn(component, 'getArticles').and.callThrough();
       spyOn(titleStub, 'setTitle').and.callThrough();
@@ -48,7 +48,7 @@ describe('ArticleListComponent', () => {
   });
 
   describe('getArticles', () => {
-    it('makes expected calls', () => {
+    it('makes expected calls getArticles', () => {
       const articleServiceStub: ArticleService = fixture.debugElement.injector.get(
         ArticleService
       );
@@ -58,31 +58,3 @@ describe('ArticleListComponent', () => {
     });
   });
 });
-
-/* import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { ArticleListComponent } from './article-list.component';
-
-describe('ArticleListComponent', () => {
-  let component: ArticleListComponent;
-  let fixture: ComponentFixture<ArticleListComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ ArticleListComponent ]
-    })
-    .compileComponents();
-  });
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(ArticleListComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
-
- */
