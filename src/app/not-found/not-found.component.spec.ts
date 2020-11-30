@@ -8,9 +8,8 @@ describe('NotFoundComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NotFoundComponent ]
-    })
-    .compileComponents();
+      declarations: [NotFoundComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -21,5 +20,15 @@ describe('NotFoundComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it(`title has default value`, () => {
+    expect(component.title).toEqual(
+      `Whoops! The page you're looking for doesn't exist.`
+    );
+  });
+
+  it(`linkText has default value`, () => {
+    expect(component.linkText).toEqual(`Back to Articles`);
   });
 });
