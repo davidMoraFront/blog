@@ -3,10 +3,10 @@
     <div>
       <img [src]="article.imageUrl" />
     </div>
-    <div>
+    <div class="article">
       <h3>{{ article.title }}</h3>
       <div class="meta-info">{{ article.date | date }}</div>
-      <p [innerHtml]="article.description"></p>
+      <div class="description" [innerHtml]="article.description"></div>
       <a routerLink="/{{ article.key }}" class="continue-reading">{{linkText}}</a>
     </div>
   </div>

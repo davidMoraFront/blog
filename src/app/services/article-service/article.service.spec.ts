@@ -56,19 +56,15 @@ describe('ArticleService', () => {
 
   it('can test for 404 error', () => {
     const emsg = 'deliberate 404 error';
-    httpClient
-      .get<Article>('http://localhost:8000/articles/my-first-article')
-      .subscribe(
-        (data) => fail('should have failed with the 404 error'),
-        (error: HttpErrorResponse) => {
-          expect(error.status).toEqual(404, 'status');
-          expect(error.error).toEqual(emsg, 'message');
-        }
-      );
-
-    const req = httpTestingController.expectOne(
-      'http://localhost:8000/articles/my-first-article'
+    httpClient.get<Article>('http://localhost:8000/404').subscribe(
+      (data) => fail('should have failed with the 404 error'),
+      (error: HttpErrorResponse) => {
+        expect(error.status).toEqual(404, 'status');
+        expect(error.error).toEqual(emsg, 'message');
+      }
     );
+
+    const req = httpTestingController.expectOne('http://localhost:8000/404');
 
     // Respond with mock error
     req.flush(emsg, { status: 404, statusText: 'Not Found' });
